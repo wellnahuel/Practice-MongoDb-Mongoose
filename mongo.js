@@ -20,16 +20,16 @@ mongoose.connect(connectionString, {
 
 //definir Schema , luego definimos modeloos
 
-const noteSchema = new Schema({ //la ido no la necesitamos
+/* const noteSchema = new Schema({ //la ido no la necesitamos
     content: String,
     date: Date,
     important: Boolean
-})
+}) */
 
 
 //con Note puedo crear instancias del modelo
 
-const Note = model('Note', noteSchema) 
+//const Note = model('Note', noteSchema) 
 
  //el nombre del modelo es en SINGULAR (las colecciones van en plural)
 
