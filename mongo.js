@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')  //LO PRIMERO QUE HACEMOS LUEGO DE INSTALARLO
 const password = require('./password.js')
-const connectionString = `mongodb+srv://nahuelcittadino:${password}@wellnahuel.v4gjjie.mongodb.net/notes?retryWrites=true&w=majority`
-const { model, Schema } = mongoose;
+const connectionString = `mongodb+srv://nahuelcittadino:${password}@wellnahuel.v4gjjie.mongodb.net/welldb?retryWrites=true&w=majority`
+//const { model, Schema } = mongoose;
 
 //conexion a mongodb
 mongoose.set("strictQuery", false);
@@ -37,26 +37,12 @@ const Note = model('Note', noteSchema)
 
 //Creacion de una nota
 
-Note.find({}).then(result => {
+/* Note.find({}).then(result => {
     console.log(result)
     mongoose.connection.close()
-})
+}) */
 
-/* const note = new Note({
-    content: 'MongoDB es increible, midu',
-    date: new Date(),
-    important: true
-})
 
-note.save()
-    .then(result => {
-      console.log(result) 
-      mongoose.connection.close() 
-    })
-    .catch(err => {
-        console.error(err)
-    }) //mongoose siempre devuelve una promesa
- */
 /* 
   "id": 1,
     "content": "Me tengo que suscribir a @midudev en YouTube",
