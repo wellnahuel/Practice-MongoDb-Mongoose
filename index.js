@@ -46,7 +46,14 @@ app.get('/', (request, response) => {
 
 app.get('/api/notes', (request, response) => {
   Note.find({}).then(notes => {
-    response.json(notes)
+    //notes.map
+    response.json(notes)/* .map(note => {
+      const { _id, __v, ...restOfNote } = note
+      return {
+        ...restOfNote,
+        id: _id
+      }
+    })) */ //ESTO NO FUNCIONA
   })
 })
 
